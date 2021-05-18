@@ -6,5 +6,5 @@ console.log('worked');
 
 console.log(sum([1, 2]));
 
-let hero = {name: 'Маг', health: 90};
+const hero = { name: 'Маг', health: 90 };
 console.log(healthDisplay(hero));

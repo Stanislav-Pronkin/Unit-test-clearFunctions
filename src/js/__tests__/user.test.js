@@ -18,40 +18,40 @@ test('should call loadUser once', () => {
 
 test('save user', () => {
   expect(() => saveUser()).toThrow('Unimplemented');
-})
-
-test('display healths', () => {
-  const hero = {name: 'Маг', health: 100};
-  const received = healthDisplay(hero);
-  expect(received).toEqual("healthy");
 });
 
 test('display healths', () => {
-  const hero = {name: 'Маг', health: 51};
+  const hero = { name: 'Маг', health: 100 };
   const received = healthDisplay(hero);
-  expect(received).toEqual("healthy");
+  expect(received).toEqual('healthy');
 });
 
 test('display healths', () => {
-  const hero = {name: 'Маг', health: 50};
+  const hero = { name: 'Маг', health: 51 };
   const received = healthDisplay(hero);
-  expect(received).toEqual("wounded");
+  expect(received).toEqual('healthy');
 });
 
 test('display healths', () => {
-  const hero = {name: 'Маг', health: 16};
+  const hero = { name: 'Маг', health: 50 };
   const received = healthDisplay(hero);
-  expect(received).toEqual("wounded");
+  expect(received).toEqual('wounded');
 });
 
 test('display healths', () => {
-  const hero = {name: 'Маг', health: 10};
+  const hero = { name: 'Маг', health: 16 };
   const received = healthDisplay(hero);
-  expect(received).toEqual("critical");
+  expect(received).toEqual('wounded');
 });
 
 test('display healths', () => {
-  const hero = {name: 'Маг', health: 1};
+  const hero = { name: 'Маг', health: 10 };
   const received = healthDisplay(hero);
-  expect(received).toEqual("critical");
+  expect(received).toEqual('critical');
+});
+
+test('display healths', () => {
+  const hero = { name: 'Маг', health: 1 };
+  const received = healthDisplay(hero);
+  expect(received).toEqual('critical');
 });
